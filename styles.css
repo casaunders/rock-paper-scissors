@@ -1,1 +1,11 @@
-/*# sourceMappingURL=styles.css.map */
+#_grass {
+  max-width: 30%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+img {
+  max-width: 75%;
+}/*# sourceMappingURL=styles.css.map */
