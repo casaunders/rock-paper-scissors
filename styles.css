@@ -16,6 +16,10 @@ h1 img {
   max-width: 100%;
 }
 
+.selection__buttons {
+  display: flex;
+}
+
 #_grass {
   justify-content: start;
   max-width: 33%;
