@@ -1,6 +1,19 @@
 #_grass {
-  max-width: 30%;
-  max-height: -moz-fit-content;
+  max-width: 33%;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#_fire {
+  max-width: 33%;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#_water {
+  max-width: 33%;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -8,4 +21,4 @@
 
 img {
   max-width: 75%;
-}/*# sourceMappingURL=styles.css.map */
+}
