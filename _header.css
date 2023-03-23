@@ -1,0 +1,25 @@
+header {
+  display: grid;
+  padding: 0%;
+  color: black;
+  font-size: larger;
+  font-weight: normal;
+}
+
+h1 {
+  padding-left: 0%;
+  display: grid;
+  justify-content: center;
+  border: solid 2px black;
+}
+
+p {
+  display: grid;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 200%;
+  justify-content: center;
+}
+
+h1 img {
+  max-width: 100%;
+}
