@@ -11,8 +11,10 @@
   font-family: pokemonC;
 }
 footer {
-  padding-left: 2px;
-  font-family: pokemonB;
+  display: flex;
+  justify-content: center;
+  padding-left: 0%;
+  font-family: pokemonA;
   color: royalblue;
   font-size: larger;
   font-weight: normal;

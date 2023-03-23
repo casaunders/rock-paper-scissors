@@ -1,16 +1,7 @@
-header {
-  display: grid;
-  padding: 0%;
-  color: black;
-  font-size: larger;
-  font-weight: normal;
-}
-
 h1 {
   padding-left: 0%;
   display: grid;
   justify-content: center;
-  border: solid 2px black;
 }
 
 p {
@@ -21,25 +12,32 @@ p {
 }
 
 h1 img {
+  display: flex;
   max-width: 100%;
 }
 
 #_grass {
+  justify-content: start;
   max-width: 33%;
+  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
 }
 
 #_fire {
+  justify-content: center;
   max-width: 33%;
+  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
 }
 
 #_water {
+  justify-content: end;
   max-width: 33%;
+  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -47,6 +45,18 @@ h1 img {
 
 img {
   max-width: 75%;
+}
+
+#_grass:hover {
+  opacity: 50%;
+}
+
+#_fire:hover {
+  opacity: 50%;
+}
+
+#_water:hover {
+  opacity: 50%;
 }
 
 @font-face {
@@ -62,9 +72,11 @@ img {
   font-family: pokemonC;
 }
 footer {
-  padding-left: 2px;
-  font-family: pokemonB;
+  display: flex;
+  justify-content: center;
+  padding-left: 0%;
+  font-family: pokemonA;
   color: royalblue;
   font-size: larger;
   font-weight: normal;
-}
+}/*# sourceMappingURL=styles.css.map */

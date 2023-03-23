@@ -1,4 +1,5 @@
 #_grass {
+    justify-content: start;
     max-width: 33%;
     max-height: fit-content;
     background-color: white;
@@ -6,6 +7,7 @@
 }
 
 #_fire {
+    justify-content: center;
     max-width: 33%;
     max-height: fit-content;
     background-color: white;
@@ -13,6 +15,7 @@
 }
 
 #_water {
+    justify-content: end;
     max-width: 33%;
     max-height: fit-content;
     background-color: white;
@@ -21,4 +24,16 @@
 
 img {
     max-width: 75%;
+}
+
+#_grass:hover {
+    opacity: 50%;
+}
+
+#_fire:hover {
+    opacity: 50%;
+}
+
+#_water:hover {
+    opacity: 50%;
 }

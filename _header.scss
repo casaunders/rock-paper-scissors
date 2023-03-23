@@ -1,16 +1,7 @@
-header {
-    display: grid;
-    padding: 0%;
-    color: black;
-    font-size: larger;
-    font-weight: normal;
-  }
-
 h1 {
     padding-left: 0%;
     display: grid;
     justify-content: center;
-    border: solid 2px black;
 }
 
 p {
@@ -21,5 +12,6 @@ p {
 }
 
 h1 img {
+    display: flex;
     max-width: 100%;
 }
