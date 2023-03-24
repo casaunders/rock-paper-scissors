@@ -18,11 +18,12 @@ h1 img {
 
 .selection__buttons {
   display: flex;
+  justify-items: center;
 }
 
 #_grass {
   justify-content: start;
-  max-width: 33%;
+  max-width: 34%;
   max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
@@ -31,7 +32,7 @@ h1 img {
 
 #_fire {
   justify-content: center;
-  max-width: 33%;
+  max-width: 34%;
   max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
@@ -40,7 +41,7 @@ h1 img {
 
 #_water {
   justify-content: end;
-  max-width: 33%;
+  max-width: 34%;
   max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
