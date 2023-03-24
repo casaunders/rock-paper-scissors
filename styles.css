@@ -16,6 +16,18 @@ h1 img {
   max-width: 100%;
 }
 
+.selection__com {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.selection__user {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.selection__result {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .selection__buttons {
   display: flex;
   justify-items: center;
@@ -24,7 +36,6 @@ h1 img {
 #_grass {
   justify-content: start;
   max-width: 34%;
-  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -33,7 +44,6 @@ h1 img {
 #_fire {
   justify-content: center;
   max-width: 34%;
-  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -42,7 +52,6 @@ h1 img {
 #_water {
   justify-content: end;
   max-width: 34%;
-  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -79,9 +88,10 @@ img {
 footer {
   display: flex;
   justify-content: center;
+  padding: 25px;
   padding-left: 0%;
   font-family: pokemonA;
   color: royalblue;
   font-size: larger;
   font-weight: normal;
-}/*# sourceMappingURL=styles.css.map */
+}

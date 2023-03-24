@@ -15,3 +15,15 @@ h1 img {
   display: flex;
   max-width: 100%;
 }
+
+.selection__com {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.selection__user {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.selection__result {
+  font-family: Arial, Helvetica, sans-serif;
+}
