@@ -8,12 +8,14 @@ var display_selection_choice = document.querySelectorAll("button");
 var selection__com;
 var selection__user;
 var selection__result; // Create functions to create user selection
+// Use functions and forLoops where we can
 
 display_selection_choice.forEach(function (possible__selection) {
-  return possible__selection.addEventListener("click", function (e) {
-    selection__user = e.target.id;
+  return possible__selection.addEventListener("click", function (x) {
+    selection__user = x.target.id;
     display_selection_user.innerHTML = selection__user;
     generate_com_selection();
+    generate__result();
   });
 }); // create functions to generate computer selection
 // Calculate selection outcome of events
@@ -36,4 +38,36 @@ function generate_com_selection() {
 
   display_selection_choice.innerHTML = selection__com;
 } // Calculate a formula to determine a winner
-// Use functions and forLoops where we can
+
+
+function generate__result() {
+  if (selection__com === selection__user) {
+    selection__result = "A Draw!";
+  }
+
+  if (selection__com === "_grass" && selection__user === "_water") {
+    result = "You Win!";
+  }
+
+  if (selection__com === "_grass" && selection__user === "_fire") {
+    result = "You Lost!";
+  }
+
+  if (selection__com === "_fire" && selection__user === "_water") {
+    result = "You Win!";
+  }
+
+  if (selection__com === "_fire" && selection__user === "_grass") {
+    result = "You Lost!";
+  }
+
+  if (selection__com === "_water" && selection__user === "_grass") {
+    result = "You Win!";
+  }
+
+  if (selection__com === "_water" && selection__user === "_fire") {
+    result = "You Lost!";
+  }
+
+  display_selection_result.innerHTML = selection__result;
+}

@@ -9,11 +9,13 @@ let selection__user
 let selection__result
 
 // Create functions to create user selection
+// Use functions and forLoops where we can
 
-display_selection_choice.forEach(possible__selection => possible__selection.addEventListener("click", (e) => {
-    selection__user = e.target.id
+display_selection_choice.forEach(possible__selection => possible__selection.addEventListener("click", (x) => {
+    selection__user = x.target.id
     display_selection_user.innerHTML = selection__user
     generate_com_selection()
+    generate__result()
 }))
 
 // create functions to generate computer selection
@@ -21,7 +23,7 @@ display_selection_choice.forEach(possible__selection => possible__selection.addE
 // Use 'if statements' to work through outcome of events
 
 function generate_com_selection() {
-    const random__number = Math.floor(Math.random() * 3) + 1;
+    const random__number = Math.floor(Math.random() * 3) + 1
     
     if (random__number === 1) {
         selection__com = "_grass"
@@ -36,5 +38,28 @@ function generate_com_selection() {
 }
 
 // Calculate a formula to determine a winner
-// Use functions and forLoops where we can
 
+function generate__result() {
+    if (selection__com === selection__user) {
+      selection__result = "A Draw!"
+    }
+    if (selection__com === "_grass" && selection__user === "_water") {
+      result = "You Win!"
+    }
+    if (selection__com === "_grass" && selection__user === "_fire") {
+      result = "You Lost!"
+    }
+    if (selection__com === "_fire" && selection__user === "_water") {
+      result = "You Win!"
+    }
+    if (selection__com === "_fire" && selection__user === "_grass") {
+      result = "You Lost!"
+    }
+    if (selection__com === "_water" && selection__user === "_grass") {
+      result = "You Win!"
+    }
+    if (selection__com === "_water" && selection__user === "_fire") {
+      result = "You Lost!"
+    }
+    display_selection_result.innerHTML = selection__result
+  }
