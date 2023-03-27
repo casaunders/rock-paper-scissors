@@ -1,9 +1,9 @@
-.selection__buttons {
+.group__buttons {
   display: flex;
   justify-items: center;
 }
 
-#_grass {
+#Grass {
   justify-content: start;
   max-width: 34%;
   max-height: fit-content;
@@ -11,7 +11,7 @@
   border: none;
 }
 
-#_fire {
+#Fire {
   justify-content: center;
   max-width: 34%;
   max-height: fit-content;
@@ -19,7 +19,7 @@
   border: none;
 }
 
-#_water {
+#Water {
   justify-content: end;
   max-width: 34%;
   max-height: fit-content;
@@ -31,14 +31,14 @@ img {
   max-width: 75%;
 }
 
-#_grass:hover {
+#Grass:hover {
   opacity: 50%;
 }
 
-#_fire:hover {
+#Fire:hover {
   opacity: 50%;
 }
 
-#_water:hover {
+#Water:hover {
   opacity: 50%;
 }
