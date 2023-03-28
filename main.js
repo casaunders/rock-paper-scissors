@@ -44,22 +44,24 @@ const generate__result = () => {
       selection__result = "A Draw!"
     }
     if (selection__com === "Grass" && selection__user === "Water") {
-      selection__result = "You Lose!"
+      selection__result = "A Loss!"
     }
     if (selection__com === "Grass" && selection__user === "Fire") {
-      selection__result = "You Lost!"
+      selection__result = "A Loss!"
     }
     if (selection__com === "Fire" && selection__user === "Water") {
-      selection__result = "You Win!"
+      selection__result = "A Win!"
     }
     if (selection__com === "Fire" && selection__user === "Grass") {
-      selection__result = "You Lost!"
+      selection__result = "A Loss!"
     }
     if (selection__com === "Water" && selection__user === "Grass") {
-      selection__result = "You Win!"
+      selection__result = "A Win!"
     }
     if (selection__com === "Water" && selection__user === "Fire") {
-      selection__result = "You Lost!"
+      selection__result = "A Loss!"
     }
     display_selection_result.innerHTML = selection__result
   }
+
+  module.exports = { generate_com_selection };
