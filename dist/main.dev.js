@@ -1,6 +1,8 @@
 "use strict";
 
 // Need use of media queries and classes to distinguish on page - hookup
+var playerScoreEl = document.getElementById('playerScore');
+var compScoreEl = document.getElementById('compScore');
 var display_selection_com = document.querySelector(".selection__com");
 var display_selection_user = document.querySelector(".selection__user");
 var display_selection_result = document.querySelector(".selection__result");
@@ -22,7 +24,7 @@ display_selection_choice.forEach(function (selection__button) {
 // Use 'if statements' to work through outcome of events
 
 var generate_com_selection = function generate_com_selection() {
-  var random__number = Math.floor(Math.random() * 3) + 1;
+  var random__number = Math.floor(Math.random() * 18) + 1;
 
   if (random__number === 1) {
     selection__com = "Grass";
@@ -34,6 +36,66 @@ var generate_com_selection = function generate_com_selection() {
 
   if (random__number === 3) {
     selection__com = "Water";
+  }
+
+  if (random__number === 4) {
+    selection__com = "Electric";
+  }
+
+  if (random__number === 5) {
+    selection__com = "Rock";
+  }
+
+  if (random__number === 6) {
+    selection__com = "Flying";
+  }
+
+  if (random__number === 7) {
+    selection__com = "Bug";
+  }
+
+  if (random__number === 8) {
+    selection__com = "Psychic";
+  }
+
+  if (random__number === 9) {
+    selection__com = "Normal";
+  }
+
+  if (random__number === 10) {
+    selection__com = "Ghost";
+  }
+
+  if (random__number === 11) {
+    selection__com = "Ground";
+  }
+
+  if (random__number === 12) {
+    selection__com = "Ice";
+  }
+
+  if (random__number === 13) {
+    selection__com = "Dragon";
+  }
+
+  if (random__number === 14) {
+    selection__com = "Dark";
+  }
+
+  if (random__number === 15) {
+    selection__com = "Fairy";
+  }
+
+  if (random__number === 16) {
+    selection__com = "Fighting";
+  }
+
+  if (random__number === 17) {
+    selection__com = "Steel";
+  }
+
+  if (random__number === 18) {
+    selection__com = "Poison";
   }
 
   display_selection_com.innerHTML = selection__com;
@@ -50,7 +112,7 @@ var generate__result = function generate__result() {
   }
 
   if (selection__com === "Grass" && selection__user === "Fire") {
-    selection__result = "A Loss!";
+    selection__result = "A Win!";
   }
 
   if (selection__com === "Fire" && selection__user === "Water") {

@@ -17,26 +17,25 @@ h1 img {
 }
 
 .selection__com {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .selection__user {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .selection__result {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .group__buttons {
-  display: flex;
-  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
 }
 
 #Grass {
-  justify-content: start;
-  max-width: 34%;
-  max-height: -moz-fit-content;
+  justify-content: center;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -44,8 +43,6 @@ h1 img {
 
 #Fire {
   justify-content: center;
-  max-width: 34%;
-  max-height: -moz-fit-content;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -53,8 +50,111 @@ h1 img {
 
 #Water {
   justify-content: end;
-  max-width: 34%;
-  max-height: -moz-fit-content;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Electric {
+  justify-content: center;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Rock {
+  justify-content: center;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Flying {
+  justify-content: end;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Bug {
+  justify-content: start;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Psychic {
+  justify-content: center;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Normal {
+  justify-content: end;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Ghost {
+  justify-content: start;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Ground {
+  justify-content: center;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Ice {
+  justify-content: end;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Dragon {
+  justify-content: start;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Dark {
+  justify-content: center;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Fairy {
+  justify-content: end;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Fighting {
+  justify-content: start;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Steel {
+  justify-content: center;
+  max-height: fit-content;
+  background-color: white;
+  border: none;
+}
+
+#Poison {
+  justify-content: center;
   max-height: fit-content;
   background-color: white;
   border: none;
@@ -73,6 +173,66 @@ img {
 }
 
 #Water:hover {
+  opacity: 50%;
+}
+
+#Electric:hover {
+  opacity: 50%;
+}
+
+#Rock:hover {
+  opacity: 50%;
+}
+
+#Flying:hover {
+  opacity: 50%;
+}
+
+#Bug:hover {
+  opacity: 50%;
+}
+
+#Psychic:hover {
+  opacity: 50%;
+}
+
+#Normal:hover {
+  opacity: 50%;
+}
+
+#Ghost:hover {
+  opacity: 50%;
+}
+
+#Ice:hover {
+  opacity: 50%;
+}
+
+#Dragon:hover {
+  opacity: 50%;
+}
+
+#Dark:hover {
+  opacity: 50%;
+}
+
+#Fairy:hover {
+  opacity: 50%;
+}
+
+#Fighting:hover {
+  opacity: 50%;
+}
+
+#Steel:hover {
+  opacity: 50%;
+}
+
+#Ground:hover {
+  opacity: 50%;
+}
+
+#Poison:hover {
   opacity: 50%;
 }
 
@@ -97,4 +257,4 @@ footer {
   color: royalblue;
   font-size: larger;
   font-weight: normal;
-}/*# sourceMappingURL=styles.css.map */
+}
