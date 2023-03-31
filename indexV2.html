@@ -19,7 +19,7 @@
 
     <!-- Need ways to make a selection -->
 
-    <div class="group__buttons">
+    <!-- <div class="group__buttons">
       <button class="selection__button" id="Grass">
         <img src="./images/grass_element_image.png" alt="Grass Selection" />
       </button>
@@ -80,18 +80,94 @@
       <button class="selection__button" id="Poison">
         <img src="./images/poison_element_image.png" alt="Poison Selection" />
       </button>
-    </div>
+    </div> -->
 
     <!-- Need divs for selections -->
 
-    <h2>Your Opponent Chose: <span class="selection__com"></span></h2>
+    <!-- <h2>Your Opponent Chose: <span class="selection__com"></span></h2>
     <h2>You Chose: <span class="selection__user"></span></h2>
     <h2>This Battle Ends In: <span class="selection__result"></span></h2>
 
-    <footer>QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxc</footer>
+    <footer>QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxc</footer> -->
 
     <!-- Need use of media queries and classes to distinguish on page -->
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <div class="group__buttons">
+      <button class="selection__button" id="Bug" onclick="play('Bug')">
+        <img src="./images/bug_element_image.png" alt="Bug Selection" />
+      </button>
+      <button class="selection__button" id="Dark" onclick="play('Dark')">
+        <img src="./images/dark_element_image.png" alt="Dark Selection" />
+      </button>
+      <button class="selection__button" id="Dragon" onclick="play('Dragon')">
+        <img src="./images/dragon_element_image.png" alt="Dragon Selection" />
+      </button>
+      <button
+        class="selection__button"
+        id="Electric"
+        onclick="play('Electric')"
+      >
+        <img
+          src="./images/electric_element_image.png"
+          alt="Electric Selection"
+        />
+      </button>
+      <button class="selection__button" id="Fairy" onclick="play('Fairy')">
+        <img src="./images/fairy_element_image.png" alt="Fairy Selection" />
+      </button>
+      <button
+        class="selection__button"
+        id="Fighting"
+        onclick="play('Fighting')"
+      >
+        <img
+          src="./images/fighting_element_image.png"
+          alt="Fighting Selection"
+        />
+      </button>
+      <button class="selection__button" id="Fire" onclick="play('Fire')">
+        <img src="./images/fire_element_image.png" alt="Fire Selection" />
+      </button>
+      <button class="selection__button" id="Flying" onclick="play('Flying')">
+        <img src="./images/flying_element_image.png" alt="Flying Selection" />
+      </button>
+      <button class="selection__button" id="Ghost" onclick="play('Ghost')">
+        <img src="./images/ghost_element_image.png" alt="Ghost Selection" />
+      </button>
+      <button class="selection__button" id="Grass" onclick="play('Grass')">
+        <img src="./images/grass_element_image.png" alt="Grass Selection" />
+      </button>
+      <button class="selection__button" id="Ground" onclick="play('Ground')">
+        <img src="./images/ground_element_image.png" alt="Ground Selection" />
+      </button>
+      <button class="selection__button" id="Ice" onclick="play('Ice')">
+        <img src="./images/ice_element_image.png" alt="Ice Selection" />
+      </button>
+      <button class="selection__button" id="Normal" onclick="play('Normal')">
+        <img src="./images/normal_element_image.png" alt="Normal Selection" />
+      </button>
+      <button class="selection__button" id="Poison" onclick="play('Poison')">
+        <img src="./images/poison_element_image.png" alt="Poison Selection" />
+      </button>
+      <button class="selection__button" id="Psychic" onclick="play('Psychic')">
+        <img src="./images/psychic_element_image.png" alt="Psychic Selection" />
+      </button>
+      <button class="selection__button" id="Rock" onclick="play('Rock')">
+        <img src="./images/rock_element_image.png" alt="Rock Selection" />
+      </button>
+      <button class="selection__button" id="Water" onclick="play('Water')">
+        <img src="./images/water_element_image.png" alt="Water Selection" />
+      </button>
+      <button class="selection__button" id="Steel" onclick="play('Steel')">
+        <img src="./images/steel_element_image.png" alt="Steel Selection" />
+      </button>
+    </div>
+
+    <div id="result">
+      <p>You've won <span id="winCount">0</span> times!</p>
+      <p id="textResult"></p>
+    </div>
+    <script src="mainV2.js"></script>
   </body>
 </html>
