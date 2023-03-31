@@ -1,135 +1,188 @@
-let playerScoreEl = document.getElementById('playerScore');
-let playerChoiceEl = document.getElementById('playerChoice');
-let compScoreEl = document.getElementById('compScore');
-let compChoiceEl = document.getElementById('compChoice');
+// Need use of media queries and classes to distinguish on page - hookup
+const display_selection_com = document.querySelector(".selection__com");
+const display_selection_user = document.querySelector(".selection__user");
+const display_selection_result = document.querySelector(".selection__result");
+const display_selection_choice =
+  document.querySelectorAll(".selection__button");
+let selection__com;
+let selection__user;
+let selection__result;
 
-let playerRock = document.getElementById('playerRock');
-let playerPaper = document.getElementById('playerPaper');
-let playerScissors = document.getElementById('playerScissors');
+// Create functions to create user selection
+// Use functions and forLoops where we can
 
-let compRock = document.getElementById('compRock');
-let compPaper = document.getElementById('compPaper');
-let compScissors = document.getElementById('compScissors');
+display_selection_choice.forEach((selection__button) =>
+  selection__button.addEventListener("click", (e) => {
+    selection__user = e.currentTarget.id;
+    display_selection_user.innerHTML = selection__user;
+    generate_com_selection();
+    generate__result();
+  })
+);
 
+// create functions to generate computer selection
+// Calculate selection outcome of events
+// Use 'if statements' to work through outcome of events
 
-let gameIcons = document.querySelectorAll('.far');
+const generate_com_selection = () => {
+  const random__number = Math.floor(Math.random() * 18) + 1;
 
-
-const choices = {
-    rock: {
-        name: 'Rock',
-        defeats: 'scissors'
-    },
-    paper: {
-        name: 'Paper',
-        defeats: 'rock'
-    },
-    scissors: {
-        name: 'Scissors',
-        defeats: 'paper'
-
-    },
+  if (random__number === 1) {
+    selection__com = "Grass";
+  }
+  if (random__number === 2) {
+    selection__com = "Fire";
+  }
+  if (random__number === 3) {
+    selection__com = "Water";
+  }
+  if (random__number === 4) {
+    selection__com = "Electric";
+  }
+  if (random__number === 5) {
+    selection__com = "Rock";
+  }
+  if (random__number === 6) {
+    selection__com = "Flying";
+  }
+  if (random__number === 7) {
+    selection__com = "Bug";
+  }
+  if (random__number === 8) {
+    selection__com = "Psychic";
+  }
+  if (random__number === 9) {
+    selection__com = "Normal";
+  }
+  if (random__number === 10) {
+    selection__com = "Ghost";
+  }
+  if (random__number === 11) {
+    selection__com = "Ground";
+  }
+  if (random__number === 12) {
+    selection__com = "Ice";
+  }
+  if (random__number === 13) {
+    selection__com = "Dragon";
+  }
+  if (random__number === 14) {
+    selection__com = "Dark";
+  }
+  if (random__number === 15) {
+    selection__com = "Fairy";
+  }
+  if (random__number === 16) {
+    selection__com = "Fighting";
+  }
+  if (random__number === 17) {
+    selection__com = "Steel";
+  }
+  if (random__number === 18) {
+    selection__com = "Poison";
+  }
+  display_selection_com.innerHTML = selection__com;
 };
-//console.log(gameIcons);
-let playerScoreNumber = 0;
-let compScoreNumber = 0;
-let compChoice = '';
 
-function resetAll() {
-    playerScoreNumber = 0;
-    compScoreNumber = 0;
-    playerScoreEl.textContent = playerScoreNumber;
-    compScoreEl.textContent = compScoreNumber;
-    playerChoiceEl.textContent = '';
-    compChoiceEl.textContent = '';
-    resultText.textContent = '';
-    resetSelected();
-}
+// Calculate a formula to determine a winner
 
-function compRandomChoice() {
-    const compChoiceNumber = Math.random();
-    if (compChoiceNumber < 0.2) {
-        compChoice = 'rock';
+const generate__result = () => {
+  if (selection__com === selection__user) {
+    selection__result = "A Draw!";
+  }
 
-    } else if (compChoiceNumber <= 0.4) {
-        compChoice = 'paper';
-    } else if (compChoiceNumber <= 0.6) {
-        compChoice = 'scissors';
-    }
-    //console.log(compChoice);
-}
+  // Grass
+  if (selection__com === "Grass" && selection__user === "Water") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Grass" && selection__user === "Ground") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Grass" && selection__user === "Rock") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Grass" && selection__user === "Fire") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Grass" && selection__user === "Ice") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Grass" && selection__user === "Poison") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Grass" && selection__user === "Flying") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Grass" && selection__user === "Bug") {
+    selection__result = "A Win!";
+  }
 
-function displayCompChoice() {
-    switch (compChoice) {
-        case 'rock':
-            compRock.classList.add('selected');
-            compChoiceEl.textContent = '--Rock';
-            break;
-        case 'paper':
-            compPaper.classList.add('selected');
-            compChoiceEl.textContent = '--Paper';
-            break;
-        case 'scissors':
-            compScissors.classList.add('selected');
-            compChoiceEl.textContent = '--Scissors';
-            break;
+  // Rock
+  if (selection__com === "Rock" && selection__user === "Ice") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Rock" && selection__user === "Water") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Rock" && selection__user === "Grass") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Rock" && selection__user === "Fighting") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Rock" && selection__user === "Ground") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Rock" && selection__user === "Steel") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Rock" && selection__user === "Fire") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Rock" && selection__user === "Ice") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Rock" && selection__user === "Flying") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Rock" && selection__user === "Bug") {
+    selection__result = "A Win!";
+  }
 
-        default:
-            break;
+  // Ice
+  if (selection__com === "Ice" && selection__user === "Grass") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Ice" && selection__user === "Ground") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Ice" && selection__user === "Flying") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Ice" && selection__user === "Dragon") {
+    selection__result = "A Loss!";
+  }
+  if (selection__com === "Ice" && selection__user === "Fire") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Ice" && selection__user === "Fighting") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Ice" && selection__user === "Rock") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Ice" && selection__user === "Steel") {
+    selection__result = "A Win!";
+  }
 
-    }
-}
+  // Dragon
+  if (selection__com === "Dragon" && selection__user === "Ice") {
+    selection__result = "A Win!";
+  }
+  if (selection__com === "Dragon" && selection__user === "Fairy") {
+    selection__result = "A Win!";
+  }
+  display_selection_result.innerHTML = selection__result;
+};
 
-function updateScore(playerChoice) {
-    //console.log(playerChoice, compChoice);
-    if (playerChoice === compChoice) {
-        resultText.textContent = "It's a tie"
-    } else {
-        let choice = choices[playerChoice];
-        if (choice.defeats.indexOf(compChoice) > -1) {
-            resultText.textContent = "You Won!";
-            playerScoreNumber++;
-            playerScoreEl.textContent = playerScoreNumber;
-        } else {
-            resultText.textContent = "You Lost!";
-            compScoreNumber++;
-            compScoreEl.textContent = compScoreNumber;
-        }
-    }
-}
-
-function resetSelected() {
-    gameIcons.forEach((icon) => {
-        icon.classList.remove('selected');
-    });
-}
-
-function checkResult(playerChoice) {
-    resetSelected();
-    compRandomChoice();
-    displayCompChoice();
-    updateScore(playerChoice);
-
-}
-
-function select(playerChoice) {
-    checkResult(playerChoice);
-
-    //console.log(playerChoice);
-    switch (playerChoice) {
-        case 'rock':
-            playerRock.classList.add('selected');
-            playerChoiceEl.textContent = '--Rock';
-            break;
-        case 'paper':
-            playerPaper.classList.add('selected');
-            playerChoiceEl.textContent = '--Paper';
-            break;
-        case 'scissors':
-            playerScissors.classList.add('selected');
-            playerChoice.textContent = '--Scissors';
-            break;
-        default:
-            break;
-    }
-}
+module.exports = { generate_com_selection };
